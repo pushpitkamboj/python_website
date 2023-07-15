@@ -1,63 +1,47 @@
-<!DOCTYPE>
-<HTML>
+<!DOCTYPE html>
+<html>
   <head>
-    <title>code and learn</title>
+    <title>Jovian Careers</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <style>
-      h1 {
-      font-size: 40px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(100, 100, 100);
-      text-align: center;
-    }
-      
       #banner {
-      width: 100%;
-      height: 360px; 
-      object-fit: cover;
-    }
-      
-      h2 {
-        font-family: Roboto;  
-        font-size: 32px;  
-        color: rgb(60, 100, 200);  
-        text-align: center;  
-        font-weight: normal;   
-    }
-      
-      p {
-        font-family: Roboto; 
-        color: rgb(90, 20, 110);
-    }
-      
-    #container {
-        max-width: 720px;
-        margin: 0 auto;
-    }
-      
-
-      </style>
+        height: 360px;
+        width: 100%;
+        object-fit:cover;
+        margin-bottom: 16px;
+      }
+    </style>
   </head>
   <body>
-    <div>
-      <h1> code and learn </h1>
-      <img id="banner"
-src="https://pythonwebsite--pushpitkamboj.repl.co/static/banner.jpg"
-        height = 350px>
-    <h2>about new AI apllications </h2>
-    <p>
-Lorem Ipsum is simply dummy text of the printing and typesetting    industry.Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when 
-      an unknown printer took a galley of type and scrambled it to make a type specimenbook. It has survived not only five centuries, but also the leap into 
-      electronic typesetting, remaining publishing software like Aldus PageMaker including versions of ....
-      
-    </p>
-    <h2> open positions </h2>
-    <p> TODO - show the jobs here </p>
-      <div style="text-align:center;"
-      <button> contact us </button>
-        
-      </div> 
-    </div>  
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://jovian-careers-website.aakashns.repl.co/static/banner.jpeg" >
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">
+        {{company_name}} Careers
+      </h1>
+      <div class="row" style="margin-bottom:32px">
+        <div class="col-md-6">
+      <p class="lead">
+        At Jovian, we’re on a mission to build the most highly reputed technical university in the world, and we’re building it completely online. Our flagship data science program helps working professionals with a background in programming or analytics make a career transition to data science. We also offer several free beginner-friendly courses and have a fast-growing community of 200,000+ users.
+      </p>
+        </div>
+        <div class="d-none d-md-block col-md-6">
+        <img src="/static/people.jpeg" style="height:320px;border-radius:4px;">
+        </div>
+      </div>
+      <h2 class="text-center mt-2 mb-4">Open Positions</h2>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+      <a class="btn btn-primary btn-lg" href="mailto:hello@jovian.ai?subject=Question%20about%20Job%20Opernings&body=My%20name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AMy%20questions%3A%20%3Center%20question%20here%3E%0D%0A">Contact Us</a>
+      </div>
+    </div>
+    {% include 'footer.html' %}
   </body>
 </html>
 
