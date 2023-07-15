@@ -1,1 +1,1 @@
-flask, python3, gunicorn
+flask, gunicorn
