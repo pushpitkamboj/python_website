@@ -1,1 +1,1 @@
-flask, python3, html, css
+flask, python3, gunicorn
