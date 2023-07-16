@@ -5,28 +5,29 @@ app = Flask(__name__)
 JOBS = [
   {
     'id': 1,
-    'title': 'Data Analyst',
-    'location': 'Bengaluru, India',
+    'title': 'video editor',
+    'location': 'Patiala, India',
     'salary': 'Rs. 10,00,000'
   },
   {
     'id': 2,
-    'title': 'Data Scientist',
+    'title': 'content writer',
     'location': 'Delhi, India',
     'salary': 'Rs. 15,00,000'
   },
   {
     'id': 3,
-    'title': 'Frontend Engineer',
+    'title': 'Fronted engineer',
     'location': 'Remote'
   },
   {
     'id': 4,
     'title': 'Backend Engineer',
-    'location': 'San Francisco, USA',
+    'location': 'remote',
     'salary': '$150,000'
   }
 ]
+
 
 @app.route("/")
 def hello_jovian():
